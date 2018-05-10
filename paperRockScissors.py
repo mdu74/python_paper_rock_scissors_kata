@@ -4,3 +4,5 @@ class PaperRockScissors(object):
             return "Loose"
         elif (myMove == "Rock" and opponentsMoves == "Sciccors") or (myMove == "Sciccors" and opponentsMoves == "Paper") or (myMove == "Paper" and opponentsMoves == "Rock"):
             return "Win"
+        elif (myMove == "Rock" and opponentsMoves == "Rock") or (myMove == "Paper" and opponentsMoves == "Paper") or (myMove == "Sciccors" and opponentsMoves == "Sciccors"):
+            return "Draw"
