@@ -21,6 +21,7 @@ class TestPaperRockScissors(unittest.TestCase):
         # Assert
         expected = "Loose"
         self.assertEqual(result, expected)
+
     def test_Play_GivenChosenSciccors_WhenOpponentChoosePaper_ShouldReturnWin(self):
         # Arrange
         myMoves = "Sciccors"
@@ -30,11 +31,11 @@ class TestPaperRockScissors(unittest.TestCase):
         # Assert
         expected = "Win"
         self.assertEqual(result, expected)
-    
+
     def test_Play_GivenChosenPaper_WhenOpponentChooseScissors_ShouldReturnLoose(self):
         # Arrange
         myMoves = "Paper"
-        opponentsMoves = "Scissors"
+        opponentsMoves = "Sciccors"
         # Act
         result = PaperRockScissors.Play(myMoves, opponentsMoves)
         # Assert
