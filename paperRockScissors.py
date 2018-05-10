@@ -1,3 +1,3 @@
 class PaperRockScissors(object):
-    def Play(move):
-        return ""
+    def Play(myMove, opponentsMoves):
+        return "Win"

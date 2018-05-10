@@ -2,11 +2,12 @@ import unittest
 from paperRockScissors import PaperRockScissors
 
 class TestPaperRockScissors(unittest.TestCase):
-    def test_Play_GivenEmptyString_ShouldReturnEmptyString(self):
+    def test_Play_GivenChosenRock_WhenOpponentChooseSciccors_ShouldReturnWin(self):
         # Arrange
-        moves = ""
+        myMoves = "Rock"
+        opponentsMoves = "Sciccors"
         # Act
-        result = PaperRockScissors.Play(moves)
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
         # Assert
-        expected = ""
+        expected = "Win"
         self.assertEqual(result, expected)
