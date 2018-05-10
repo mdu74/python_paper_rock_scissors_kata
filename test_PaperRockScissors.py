@@ -21,3 +21,22 @@ class TestPaperRockScissors(unittest.TestCase):
         # Assert
         expected = "Loose"
         self.assertEqual(result, expected)
+    def test_Play_GivenChosenSciccors_WhenOpponentChoosePaper_ShouldReturnWin(self):
+        # Arrange
+        myMoves = "Sciccors"
+        opponentsMoves = "Paper"
+        # Act
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
+        # Assert
+        expected = "Win"
+        self.assertEqual(result, expected)
+    
+    def test_Play_GivenChosenPaper_WhenOpponentChooseScissors_ShouldReturnLoose(self):
+        # Arrange
+        myMoves = "Paper"
+        opponentsMoves = "Scissors"
+        # Act
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
+        # Assert
+        expected = "Loose"
+        self.assertEqual(result, expected)
