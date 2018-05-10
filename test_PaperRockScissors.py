@@ -31,11 +31,31 @@ class TestPaperRockScissors(unittest.TestCase):
         # Assert
         expected = "Win"
         self.assertEqual(result, expected)
-
+        
     def test_Play_GivenChosenPaper_WhenOpponentChooseScissors_ShouldReturnLoose(self):
         # Arrange
         myMoves = "Paper"
         opponentsMoves = "Sciccors"
+        # Act
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
+        # Assert
+        expected = "Loose"
+        self.assertEqual(result, expected)
+        
+    def test_Play_GivenChosenPaper_WhenOpponentChooseRock_ShouldReturnWin(self):
+        # Arrange
+        myMoves = "Paper"
+        opponentsMoves = "Rock"
+        # Act
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
+        # Assert
+        expected = "Win"
+        self.assertEqual(result, expected)
+        
+    def test_Play_GivenChosenRock_WhenOpponentChoosePaper_ShouldReturnWin(self):
+        # Arrange
+        myMoves = "Rock"
+        opponentsMoves = "Paper"
         # Act
         result = PaperRockScissors.Play(myMoves, opponentsMoves)
         # Assert
