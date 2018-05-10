@@ -11,3 +11,13 @@ class TestPaperRockScissors(unittest.TestCase):
         # Assert
         expected = "Win"
         self.assertEqual(result, expected)
+    
+    def test_Play_GivenChosenSciccors_WhenOpponentChooseRock_ShouldReturnLoose(self):
+        # Arrange
+        myMoves = "Sciccors"
+        opponentsMoves = "Rock"
+        # Act
+        result = PaperRockScissors.Play(myMoves, opponentsMoves)
+        # Assert
+        expected = "Loose"
+        self.assertEqual(result, expected)
