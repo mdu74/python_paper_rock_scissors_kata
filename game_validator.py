@@ -1,4 +1,4 @@
-class GameValidator(object):
+class GameValidator():
     def conditionsForLoss(myMove, opponentsMoves):
         return (myMove == "Sciccors" and opponentsMoves == "Rock") or (myMove == "Paper" and opponentsMoves == "Sciccors") or (myMove == "Rock" and opponentsMoves == "Paper")
 
