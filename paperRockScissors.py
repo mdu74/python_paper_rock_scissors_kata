@@ -1,6 +1,6 @@
 from game_validator import GameValidator
 
-class PaperRockScissors():
+class PaperRockScissors:
     def Play(myMove, opponentsMoves):
         if GameValidator.conditionsForLoss(myMove, opponentsMoves):
             return "Loose"
